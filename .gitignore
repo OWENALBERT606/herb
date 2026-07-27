@@ -38,6 +38,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# reference-only source, not part of the app
+/compute-the-platform-to-build-and-ship-ai-agents
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

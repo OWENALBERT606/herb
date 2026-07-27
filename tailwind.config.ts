@@ -1,68 +1,3 @@
-// // tailwind.config.ts
-// import type { Config } from "tailwindcss"
-
-// const config: Config = {
-//   darkMode: "class", // important for theme toggle with shadcn
-//   content: [
-//     "./app/**/*.{ts,tsx}",
-//     "./components/**/*.{ts,tsx}",
-//     "./src/**/*.{ts,tsx}", // keep this if you have a /src folder
-//   ],
-//   theme: {
-//     extend: {
-//       borderRadius: {
-//         sm: "calc(var(--radius) - 4px)",
-//         md: "calc(var(--radius) - 2px)",
-//         lg: "var(--radius)",
-//         xl: "calc(var(--radius) + 4px)",
-//       },
-//       colors: {
-//         background: "var(--background)",
-//         foreground: "var(--foreground)",
-//         card: "var(--card)",
-//         "card-foreground": "var(--card-foreground)",
-//         popover: "var(--popover)",
-//         "popover-foreground": "var(--popover-foreground)",
-//         primary: "var(--primary)",
-//         "primary-foreground": "var(--primary-foreground)",
-//         secondary: "var(--secondary)",
-//         "secondary-foreground": "var(--secondary-foreground)",
-//         muted: "var(--muted)",
-//         "muted-foreground": "var(--muted-foreground)",
-//         accent: "var(--accent)",
-//         "accent-foreground": "var(--accent-foreground)",
-//         destructive: "var(--destructive)",
-//         border: "var(--border)",
-//         input: "var(--input)",
-//         ring: "var(--ring)",
-
-//         // Optional: if you want to use them directly as Tailwind classes
-//         sidebar: "var(--sidebar)",
-//         "sidebar-foreground": "var(--sidebar-foreground)",
-//         "sidebar-primary": "var(--sidebar-primary)",
-//         "sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
-//         "sidebar-accent": "var(--sidebar-accent)",
-//         "sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
-//         "sidebar-border": "var(--sidebar-border)",
-//         "sidebar-ring": "var(--sidebar-ring)",
-
-//         "chart-1": "var(--chart-1)",
-//         "chart-2": "var(--chart-2)",
-//         "chart-3": "var(--chart-3)",
-//         "chart-4": "var(--chart-4)",
-//         "chart-5": "var(--chart-5)",
-//       },
-//     },
-//   },
-//   plugins: [require("tailwindcss-animate")],
-// }
-
-// export default config
-
-
-
-
-// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -74,11 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // Fonts
       fontFamily: {
-        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-outfit)", "var(--font-dm-sans)", "system-ui", "sans-serif"],
-        heading: ["var(--font-sora)", "var(--font-outfit)", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-instrument-serif)", "Georgia", "serif"],
       },
       borderRadius: {
         sm: "calc(var(--radius) - 4px)",
@@ -89,51 +22,43 @@ const config: Config = {
         "3xl": "calc(var(--radius) + 12px)",
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        card: "var(--card)",
-        "card-foreground": "var(--card-foreground)",
-        popover: "var(--popover)",
-        "popover-foreground": "var(--popover-foreground)",
-        primary: "var(--primary)",
-        "primary-foreground": "var(--primary-foreground)",
-        secondary: "var(--secondary)",
-        "secondary-foreground": "var(--secondary-foreground)",
-        muted: "var(--muted)",
-        "muted-foreground": "var(--muted-foreground)",
-        accent: "var(--accent)",
-        "accent-foreground": "var(--accent-foreground)",
-        destructive: "var(--destructive)",
-        "destructive-foreground": "var(--destructive-foreground)",
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
+        background: "oklch(var(--background) / <alpha-value>)",
+        foreground: "oklch(var(--foreground) / <alpha-value>)",
+        card: "oklch(var(--card) / <alpha-value>)",
+        "card-foreground": "oklch(var(--card-foreground) / <alpha-value>)",
+        popover: "oklch(var(--popover) / <alpha-value>)",
+        "popover-foreground": "oklch(var(--popover-foreground) / <alpha-value>)",
+        primary: "oklch(var(--primary) / <alpha-value>)",
+        "primary-foreground": "oklch(var(--primary-foreground) / <alpha-value>)",
+        secondary: "oklch(var(--secondary) / <alpha-value>)",
+        "secondary-foreground": "oklch(var(--secondary-foreground) / <alpha-value>)",
+        muted: "oklch(var(--muted) / <alpha-value>)",
+        "muted-foreground": "oklch(var(--muted-foreground) / <alpha-value>)",
+        accent: "oklch(var(--accent) / <alpha-value>)",
+        "accent-foreground": "oklch(var(--accent-foreground) / <alpha-value>)",
+        destructive: "oklch(var(--destructive) / <alpha-value>)",
+        "destructive-foreground": "oklch(var(--destructive-foreground) / <alpha-value>)",
+        border: "oklch(var(--border) / <alpha-value>)",
+        input: "oklch(var(--input) / <alpha-value>)",
+        ring: "oklch(var(--ring) / <alpha-value>)",
 
         // Sidebar
-        sidebar: "var(--sidebar)",
-        "sidebar-foreground": "var(--sidebar-foreground)",
-        "sidebar-primary": "var(--sidebar-primary)",
-        "sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
-        "sidebar-accent": "var(--sidebar-accent)",
-        "sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
-        "sidebar-border": "var(--sidebar-border)",
-        "sidebar-ring": "var(--sidebar-ring)",
+        sidebar: "oklch(var(--sidebar) / <alpha-value>)",
+        "sidebar-foreground": "oklch(var(--sidebar-foreground) / <alpha-value>)",
+        "sidebar-primary": "oklch(var(--sidebar-primary) / <alpha-value>)",
+        "sidebar-primary-foreground": "oklch(var(--sidebar-primary-foreground) / <alpha-value>)",
+        "sidebar-accent": "oklch(var(--sidebar-accent) / <alpha-value>)",
+        "sidebar-accent-foreground": "oklch(var(--sidebar-accent-foreground) / <alpha-value>)",
+        "sidebar-border": "oklch(var(--sidebar-border) / <alpha-value>)",
+        "sidebar-ring": "oklch(var(--sidebar-ring) / <alpha-value>)",
 
         // Charts
-        "chart-1": "var(--chart-1)",
-        "chart-2": "var(--chart-2)",
-        "chart-3": "var(--chart-3)",
-        "chart-4": "var(--chart-4)",
-        "chart-5": "var(--chart-5)",
+        "chart-1": "oklch(var(--chart-1) / <alpha-value>)",
+        "chart-2": "oklch(var(--chart-2) / <alpha-value>)",
+        "chart-3": "oklch(var(--chart-3) / <alpha-value>)",
+        "chart-4": "oklch(var(--chart-4) / <alpha-value>)",
+        "chart-5": "oklch(var(--chart-5) / <alpha-value>)",
       },
-      // Box shadows
-      boxShadow: {
-        "emerald-sm": "0 2px 8px -2px rgba(16, 185, 129, 0.2)",
-        "emerald-md": "0 4px 16px -4px rgba(16, 185, 129, 0.25)",
-        "emerald-lg": "0 8px 32px -8px rgba(16, 185, 129, 0.3)",
-        "emerald-xl": "0 16px 48px -12px rgba(16, 185, 129, 0.35)",
-      },
-      // Animations
       animation: {
         "fade-in": "fadeIn 0.5s ease-out",
         "fade-in-up": "fadeInUp 0.5s ease-out",
@@ -142,7 +67,6 @@ const config: Config = {
         "slide-in-right": "slideInRight 0.5s ease-out",
         "scale-in": "scaleIn 0.3s ease-out",
         float: "float 6s ease-in-out infinite",
-        "pulse-glow": "pulseGlow 2s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -172,10 +96,6 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
-        },
-        pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(16, 185, 129, 0.25)" },
-          "50%": { boxShadow: "0 0 40px rgba(16, 185, 129, 0.4)" },
         },
       },
     },

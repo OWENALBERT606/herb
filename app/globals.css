@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: 0.15 0.025 55;
+  --foreground: 0.96 0.02 85;
+  --card: 0.19 0.03 50;
+  --card-foreground: 0.96 0.02 85;
+  --popover: 0.19 0.03 50;
+  --popover-foreground: 0.96 0.02 85;
+  --primary: 0.74 0.13 78;
+  --primary-foreground: 0.15 0.025 55;
+  --secondary: 0.32 0.06 40;
+  --secondary-foreground: 0.96 0.02 85;
+  --muted: 0.24 0.025 50;
+  --muted-foreground: 0.68 0.03 70;
+  --accent: 0.34 0.07 38;
+  --accent-foreground: 0.96 0.02 85;
+  --destructive: 0.55 0.2 25;
+  --destructive-foreground: 0.96 0.02 85;
+  --border: 0.32 0.03 50;
+  --input: 0.22 0.025 50;
+  --ring: 0.74 0.13 78;
+  --chart-1: 0.74 0.13 78;
+  --chart-2: 0.6 0.1 60;
+  --chart-3: 0.46 0.08 45;
+  --chart-4: 0.34 0.06 40;
+  --chart-5: 0.24 0.03 50;
+  --radius: 0.5rem;
+  --sidebar: 0.13 0.02 55;
+  --sidebar-foreground: 0.96 0.02 85;
+  --sidebar-primary: 0.74 0.13 78;
+  --sidebar-primary-foreground: 0.15 0.025 55;
+  --sidebar-accent: 0.24 0.025 50;
+  --sidebar-accent-foreground: 0.96 0.02 85;
+  --sidebar-border: 0.3 0.03 50;
+  --sidebar-ring: 0.74 0.13 78;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-radial-glow {
+    background-image: radial-gradient(
+        60% 50% at 15% 20%,
+        color-mix(in oklch, oklch(var(--primary)) 18%, transparent) 0%,
+        transparent 70%
+      ),
+      radial-gradient(
+        50% 60% at 85% 80%,
+        color-mix(in oklch, oklch(var(--secondary)) 35%, transparent) 0%,
+        transparent 70%
+      );
+  }
+
+  .pattern-border {
+    background-image: repeating-linear-gradient(
+      45deg,
+      color-mix(in oklch, oklch(var(--primary)) 35%, transparent) 0,
+      color-mix(in oklch, oklch(var(--primary)) 35%, transparent) 2px,
+      transparent 2px,
+      transparent 14px
+    );
+  }
+}
