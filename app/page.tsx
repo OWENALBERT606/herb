@@ -4,13 +4,18 @@ import { FeaturedService } from "@/components/landing/featured-service";
 import { ServicesShowcase } from "@/components/landing/services-showcase";
 import { AboutTeaser } from "@/components/landing/about-teaser";
 import { Gallery } from "@/components/landing/gallery";
+import { CaseTypes } from "@/components/services/case-types";
 import { Button } from "@/components/ui/button";
+import { getServiceBySlug } from "@/data/services";
 
 export default function Home() {
+  const courtCases = getServiceBySlug("court-cases");
+
   return (
     <main>
       <HeroSection />
       <FeaturedService />
+      {courtCases?.caseTypes && <CaseTypes items={courtCases.caseTypes} />}
       <ServicesShowcase />
       <AboutTeaser />
       <Gallery />

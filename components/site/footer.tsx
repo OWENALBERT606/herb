@@ -55,10 +55,10 @@ export function Footer() {
           <div>
             <h3 className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Contact</h3>
             <ul className="mt-4 space-y-3 text-sm text-foreground/80">
-              <li>Uganda, East Africa</li>
+              <li>Uganda, Africa</li>
               <li>
-                <a href="tel:+256000000000" className="hover:text-primary transition-colors">
-                  +256 XXX XXX XXX
+                <a href="tel:+256726616990" className="hover:text-primary transition-colors">
+                  +256 726 616 990
                 </a>
               </li>
               <li>

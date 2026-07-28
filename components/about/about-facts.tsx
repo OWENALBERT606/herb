@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { services } from "@/data/services";
 
 const facts = [
-  { value: "Uganda", label: "East Africa" },
+  { value: "Uganda", label: "Africa" },
   { value: String(services.length), label: "sacred rituals offered" },
   { value: "Ancestral", label: "wisdom & proven ritual" },
 ];

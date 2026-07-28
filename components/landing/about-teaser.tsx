@@ -16,7 +16,7 @@ export function AboutTeaser() {
           className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl border border-border/60 shadow-xl shadow-black/30"
         >
           <Image
-            src="/images/tango-mzizi-portrait-2.jpeg"
+            src="/images/tango-mzizi-ceremonial.jpeg"
             alt="Tango Mzizi"
             fill
             sizes="(max-width: 1024px) 90vw, 40vw"

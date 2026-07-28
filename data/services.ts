@@ -1,3 +1,8 @@
+export type CaseType = {
+  title: string;
+  detail?: string;
+};
+
 export type Service = {
   slug: string;
   title: string;
@@ -6,6 +11,7 @@ export type Service = {
   image: string;
   body: string[];
   closing: string;
+  caseTypes?: CaseType[];
 };
 
 export const services: Service[] = [
@@ -20,6 +26,24 @@ export const services: Service[] = [
       "Whether it's a criminal case, civil lawsuit, or family dispute, many clients have experienced breakthroughs and favorable judgments after the ritual.",
     ],
     closing: "Contact me for a personalized court case reading.",
+    caseTypes: [
+      {
+        title: "Civil Cases",
+        detail: "Contracts, personal injury, property disputes, business litigation, employment, consumer",
+      },
+      { title: "Criminal Cases", detail: "Felonies, misdemeanors" },
+      {
+        title: "Family Law",
+        detail: "Divorce, child custody, child support, adoption, domestic violence orders",
+      },
+      { title: "Probate", detail: "Wills, estates, trusts, guardianships" },
+      { title: "Bankruptcy" },
+      { title: "Juvenile Cases" },
+      { title: "Administrative / Government Agency Cases" },
+      { title: "Traffic / Minor Offense Cases" },
+      { title: "Small Claims" },
+      { title: "Appeals" },
+    ],
   },
   {
     slug: "love",

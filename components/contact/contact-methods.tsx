@@ -7,14 +7,14 @@ const contactMethods = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+256 XXX XXX XXX",
-    href: "tel:+256000000000",
+    value: "+256 726 616 990",
+    href: "tel:+256726616990",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "+256 XXX XXX XXX",
-    href: "https://wa.me/256000000000",
+    value: "+256 726 616 990",
+    href: "https://wa.me/256726616990",
   },
   {
     icon: Mail,
@@ -25,7 +25,7 @@ const contactMethods = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Uganda, East Africa",
+    value: "Uganda, Africa",
     href: undefined,
   },
 ];

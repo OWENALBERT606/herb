@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { CaseTypes } from "@/components/services/case-types";
 import { services, getServiceBySlug } from "@/data/services";
 
 export function generateStaticParams() {
@@ -76,6 +77,8 @@ export default async function ServiceDetailPage({
           </div>
         </div>
       </section>
+
+      {service.caseTypes && <CaseTypes items={service.caseTypes} />}
 
       <section className="border-t border-border/60 bg-card/40">
         <div className="mx-auto max-w-[1400px] px-6 py-16 lg:px-12">

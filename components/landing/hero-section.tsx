@@ -179,7 +179,7 @@ export function HeroSection() {
           >
             <span className="inline-flex items-center gap-3 text-sm font-mono text-white/60">
               <span className="w-8 h-px bg-white/30" />
-              Court Case &amp; Legal Battle Specialist &middot; Uganda, Africa
+              Court Case &amp; Legal Battle Specialist
             </span>
           </div>
 
@@ -190,7 +190,7 @@ export function HeroSection() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <span className="block whitespace-nowrap">Ancestral wisdom,</span>
+              <span className="block whitespace-nowrap">Ancestral spells,</span>
               <span className="block whitespace-nowrap">
                 real{" "}
                 <span className="relative inline-block">
