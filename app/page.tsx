@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { FeaturedService } from "@/components/landing/featured-service";
 import { ServicesShowcase } from "@/components/landing/services-showcase";
 import { AboutTeaser } from "@/components/landing/about-teaser";
+import { Gallery } from "@/components/landing/gallery";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturedService />
       <ServicesShowcase />
       <AboutTeaser />
+      <Gallery />
 
       <section className="border-t border-border/60 bg-card/40">
         <div className="mx-auto max-w-[1400px] px-6 py-20 text-center lg:px-12">

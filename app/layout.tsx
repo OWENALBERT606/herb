@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   description:
     "Win Court Cases connects you with Tango Mzizi, a traditional spiritual healer from Uganda specializing in court case victory through ancestral ritual — also offering love, marriage, wealth, health, longevity, and fertility rituals.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://wincourtcases.com"),
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
