@@ -4,13 +4,17 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  { src: "/images/tango-mzizi-ceremonial.jpeg", caption: "Traditional Ceremony" },
-  { src: "/images/court-gavel.jpg", caption: "Court Victory Ritual" },
-  { src: "/images/tango-mzizi-portrait-1.jpeg", caption: "Tango Mzizi" },
-  { src: "/images/ritual-altar.jpg", caption: "Sacred Altar" },
-  { src: "/images/tango-mzizi-portrait-2.jpeg", caption: "In Practice" },
-  { src: "/images/ritual-herbs.jpg", caption: "Herbal Blessing" },
-  { src: "/images/tango-mzizi-portrait-bw.jpeg", caption: "Wisdom & Experience" },
+  { src: "/images/gallery/testimonial-couple.jpg", alt: "Long-time client visit" },
+  { src: "/gallery/WhatsApp Image 2026-07-29 at 08.41.17.jpeg", alt: "Long-time client visit" },
+  { src: "/images/gallery/wealth-ritual-client.jpg", alt: "Wealth ritual client" },
+  {
+    src: "/images/gallery/ritual-market-stall.jpg",
+    alt: "Traditional medicine market",
+    caption: "Traditional Medicine Market",
+  },
+  { src: "/images/gallery/sabanga-tree.jpg", alt: "Sabanga Tree, home of the jinnis" },
+  { src: "/images/gallery/family-visit.jpg", alt: "Family visit" },
+  { src: "/gallery/WhatsApp Image 2026-07-29 at 08.41.22.jpeg", alt: "Family visit" },
 ];
 
 export function Gallery() {
@@ -45,16 +49,20 @@ export function Gallery() {
             >
               <Image
                 src={image.src}
-                alt={image.caption}
+                alt={image.alt}
                 width={600}
                 height={i % 3 === 0 ? 750 : 450}
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="absolute bottom-4 left-4 text-sm text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                {image.caption}
-              </span>
+              {image.caption && (
+                <>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <span className="absolute bottom-4 left-4 text-sm text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    {image.caption}
+                  </span>
+                </>
+              )}
             </motion.div>
           ))}
         </div>

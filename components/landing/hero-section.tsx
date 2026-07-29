@@ -179,7 +179,7 @@ export function HeroSection() {
           >
             <span className="inline-flex items-center gap-3 text-sm font-mono text-white/60">
               <span className="w-8 h-px bg-white/30" />
-              Court Case &amp; Legal Battle Specialist
+              Ancestral Spells That Deliver Court Victories
             </span>
           </div>
 
